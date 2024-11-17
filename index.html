@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JobSphere</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo">
+        <h1>JobSphere.</h1>
+    </div>
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#joblistings">Job listings</a>
+        <a href="#companies">Companies</a>
+        <a href="#cv">Upload C.V.</a> 
+        <a href="#contact">Contacts</a>
+    </nav>
+    <a href ="signin.html" target="_blank">
+    <button class="login-btn">Login/Signup</button></a>
+    <label class="toggle-switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+    </label>
+</header>
+
+  
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Welcome to the JobSphere's Placement Portal</h2>
+      <p>Your Gateway to a Brighter Future</p>
+      <button class="cta-btn">Explore Opportunities</button>
+    </div>
+  </section>
+
+<!-- Job Listings Section -->
+<section class="job-listings" id="joblistings">
+  <h2>Job Listings</h2>
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input 
+      type="text" 
+      id="jobSearchInput" 
+      placeholder="Search for jobs, roles, or companies..." 
+      onkeyup="filterJobs()"
+    />
+  </div>
+
+  <div class="company-flexbox">
+    <!-- TCS Job Card -->
+    <div class="company-card1" data-role="Software Developer" data-company="TCS" data-title="Software Developer">
+      <h3>TCS </h3>
+      <p>Role: Software Developer</p>
+      <p>Salary: ₹4,50,000 - ₹6,00,000</p>
+      <p>Minimum Experience: 2 years</p>
+      <button class="apply-btn">Apply Now</button>
+    </div>
+
+    <!-- Wipro Job Card -->
+    <div class="company-card1" data-role="Data Analyst" data-company="Wipro" data-title="Data Analyst">
+      <h3>Wipro </h3>
+      <p>Role: Data Analyst</p>
+      <p>Salary: ₹4,00,000 - ₹5,50,000</p>
+      <p>Minimum Experience: 1 year</p>
+      <button class="apply-btn">Apply Now</button>
+    </div>
+
+    <!-- Cognizant Job Card -->
+    <div class="company-card1" data-role="Cloud Engineer" data-company="Cognizant" data-title="Cloud Engineer">
+      <h3>Cognizant </h3>
+      <p>Role: Cloud Engineer</p>
+      <p>Salary: ₹5,50,000 - ₹7,00,000</p>
+      <p>Minimum Experience: 3 years</p>
+      <button class="apply-btn">Apply Now</button>
+    </div>
+
+  
+      <!-- Deloitte Job Card -->
+      <div class="company-card1" data-role="Business Analyst" data-company="Deloitte" data-title="Business Analyst">
+        <h3>Deloitte</h3>
+        <p>Role: Business Analyst</p>
+        <p>Salary: ₹6,00,000 - ₹8,00,000</p>
+        <p>Minimum Experience: 2 years</p>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+  
+      <!-- Mindtree Job Card -->
+      <div class="company-card1" data-role="Project Manager" data-company="Mindtree" data-title="Project Manager">
+        <h3>Mindtree</h3>
+        <p>Role: Project Manager</p>
+        <p>Salary: ₹8,00,000 - ₹10,00,000</p>
+        <p>Minimum Experience: 5 years</p>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+  
+      <!-- PwC Job Card -->
+      <div class="company-card1" data-role="Cybersecurity Specialist" data-company="PwC" data-title="Cybersecurity Specialist">
+        <h3>PwC</h3>
+        <p>Role: Cybersecurity Specialist</p>
+        <p>Salary: ₹9,00,000 - ₹12,00,000</p>
+        <p>Minimum Experience: 4 years</p>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+  
+      <!-- Infosys Job Card -->
+      <div class="company-card1" data-role="Front-End Developer" data-company="Infosys" data-title="Front-End Developer">
+        <h3>Infosys</h3>
+        <p>Role: Front-End Developer</p>
+        <p>Salary: ₹4,80,000 - ₹7,00,000</p>
+        <p>Minimum Experience: 2 years</p>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+  
+      <!-- Accenture Job Card -->
+      <div class="company-card1" data-role="Full Stack Developer" data-company="Accenture" data-title="Full Stack Developer">
+        <h3>Accenture</h3>
+        <p>Role: Full Stack Developer</p>
+        <p>Salary: ₹6,50,000 - ₹8,50,000</p>
+        <p>Minimum Experience: 3 years</p>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+  
+      <!-- IBM Job Card -->
+      <div class="company-card1" data-role="Data Scientist" data-company="IBM" data-title="Data Scientist">
+        <h3>IBM</h3>
+        <p>Role: Data Scientist</p>
+        <p>Salary: ₹10,00,000 - ₹13,00,000</p>
+        <p>Minimum Experience: 4 years</p>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+  
+      <!-- Amazon Job Card -->
+      <div class="company-card1" data-role="Machine Learning Engineer" data-company="Amazon" data-title="Machine Learning Engineer">
+        <h3>Amazon</h3>
+        <p>Role: Machine Learning Engineer</p>
+        <p>Salary: ₹12,00,000 - ₹15,00,000</p>
+        <p>Minimum Experience: 5 years</p>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+  
+      <!-- Oracle Job Card -->
+      <div class="company-card1" data-role="Database Administrator" data-company="Oracle" data-title="Database Administrator">
+        <h3>Oracle</h3>
+        <p>Role: Database Administrator</p>
+        <p>Salary: ₹9,50,000 - ₹11,50,000</p>
+        <p>Minimum Experience: 3 years</p>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+  
+      <!-- HCL Job Card -->
+      <div class="company-card1" data-role="Network Engineer" data-company="HCL" data-title="Network Engineer">
+        <h3>HCL</h3>
+        <p>Role: Network Engineer</p>
+        <p>Salary: ₹5,00,000 - ₹7,50,000</p>
+        <p>Minimum Experience: 2 years</p>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+    </div>
+  </section>
+
+
+   <!-- Companies Section -->
+<section id="companies" class="featured-companies">
+  <h2>Featured Companies</h2>
+  <div class="company-grid">
+      <div class="company-card">
+          <a href="https://www.tcs.com" target="_blank">
+              <img src="TCS_logo_29.png" alt="TCS Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.ibm.com" target="_blank">
+              <img src="ibm.png" alt="IBM Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.pwc.com" target="_blank">
+              <img src="pwc.png" alt="PwC Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.microsoft.com" target="_blank">
+              <img src="Microsoft-Logo.wine.png" alt="Microsoft Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.infosys.com" target="_blank">
+              <img src="infosys.png" alt="Infosys Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.capgemini.com" target="_blank">
+              <img src="Capgemini-Logo.wine.png" alt="Capgemini Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.mindtree.com" target="_blank">
+              <img src="Mindtree.png" alt="Mindtree Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.hp.com" target="_blank">
+              <img src="hp.png" alt="HP Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.wipro.com" target="_blank">
+              <img src="wipro.png" alt="Wipro Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.cognizant.com" target="_blank">
+              <img src="Cognizant_logo_2022.svg.png" alt="Cognizant Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.accenture.com" target="_blank">
+              <img src="accenture.png" alt="Accenture Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.amd.com" target="_blank">
+              <img src="amd.png" alt="AMD Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.intel.com" target="_blank">
+              <img src="intel.png" alt="Intel Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.genpact.com" target="_blank">
+              <img src="genpact.png" alt="Genpact Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.hcltech.com" target="_blank">
+              <img src="hcl.png" alt="HCL Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.oracle.com" target="_blank">
+              <img src="oracle.png" alt="Oracle Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.nvidia.com" target="_blank">
+              <img src="nvidia.png" alt="NVIDIA Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.deloitte.com" target="_blank">
+              <img src="Deloitte_Logo.png" alt="Deloitte Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.adobe.com" target="_blank">
+              <img src="Adobe_Corporate_logo.svg.png" alt="Adobe Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.redingtongroup.com" target="_blank">
+              <img src="redington.png" alt="Redington Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.mphasis.com" target="_blank">
+              <img src="mphasis.png" alt="Mphasis Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.cisco.com" target="_blank">
+              <img src="cisco.png" alt="Cisco Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.quesscorp.com" target="_blank">
+              <img src="Quess.png" alt="Quess Logo">
+          </a>
+      </div>
+      <div class="company-card">
+          <a href="https://www.lntinfotech.com" target="_blank">
+              <img src="LTINFOTECH.png" alt="LTI Logo">
+          </a>
+      </div>
+  </div>
+</section>
+<section id="cv">
+<div class="cv-upload">
+  <h2>Upload Your CV</h2>
+  <p>Fill in your details and upload your CV to apply for job listings.</p>
+  <form id="cvUploadForm">
+    <div class="form-group">
+      <label for="student-name">Name</label>
+      <input type="text" id="student-name" placeholder="Enter your full name" required />
+    </div>
+    <div class="form-group">
+      <label for="student-email">Email</label>
+      <input type="email" id="student-email" placeholder="Enter your email" required />
+    </div>
+    <div class="form-group">
+      <label for="cv-file">Upload CV</label>
+      <input type="file" id="cv-file" accept=".pdf,.doc,.docx" required />
+    </div>
+    <button type="submit" class="submit-btn">Upload CV</button>
+    <p id="upload-status" style="margin-top: 10px; font-weight: 600; color: green; display: none;">
+      CV uploaded successfully!
+    </p>
+  </form>
+</div>
+</section>
+
+
+
+  <!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <h2>Contact Us</h2>
+  
+  <!-- Contact Intro -->
+  <p>If you have any questions or need assistance, feel free to reach out to us. We're here to help!</p>
+  
+  <!-- Contact Email -->
+  <p>For inquiries, you can email us directly at:  
+    <a href="mailto:info@placementportal.com" class="contact-email">info@placementportal.com</a>
+  </p>
+
+  <!-- Contact Form Section -->
+  <div class="contact-form">
+    <h3>Send Us a Message</h3>
+    <p>We’d love to hear from you! Please fill out the form below and we’ll get back to you as soon as possible:</p>
+
+    <form action="submit_form.php" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Additional Contact Info -->
+  <div class="contact-info">
+    <h3>Our Contact Information</h3>
+    <p><strong>Phone:</strong> <a href="tel:+18001234567">+1 (800) 123-4567</a></p>
+    <p><strong>Office Address:</strong> 123 Business St., Suite 456, City, State, Zip Code</p>
+  </div>
+</section>
+>
+
+  <!-- Footer Section -->
+<footer class="footer">
+  <p>Contact us: info@placementportal.com</p>
+  <div class="social-links">
+    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+  </div>
+  <a href="about_us.html" target="_blank" ><button class="about-btn" onclick="window.location.href='#about'">About Us</button></a>
+</footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

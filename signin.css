@@ -1,0 +1,206 @@
+/--- Sign in- PAGE---/
+
+
+/* General Styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+    color: #333;
+  }
+  
+  /* Sign In Section */
+  .signin-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to right, #1E2A47, #007bff);
+  }
+  
+  .signin-container {
+    background-color: #fff;
+    padding: 30px 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .signin-container:hover {
+    transform: translateY(-10px);
+  }
+  
+  .signin-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    border-color: #84b3e4;
+    outline: none;
+  }
+
+
+  /* Align the checkbox next to the label */
+.remember-me label {
+    display: flex;         /* Use flexbox to align items horizontally */
+    align-items: center;   /* Vertically center the checkbox and label text */
+  }
+  
+  .remember-me input[type="checkbox"] {
+    margin-left: 3px;     /* Optional: space between checkbox and text */
+  }
+  
+  
+  .password-container {
+    position: relative;
+  }
+  
+  .password-container input {
+    padding-right: 15px;
+  }
+  
+  #password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .remember-me {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .remember-me input {
+    margin-right: 10px;
+  }
+  
+  .signin-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signin-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .additional-options {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .forgot-password {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .signup-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signup-link:hover {
+    text-decoration: underline;
+  }
+  
+  .social-login {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .social-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social-btn i {
+    margin-right: 10px;
+  }
+  
+  .google-btn {
+    background-color: #db4437;
+  }
+  
+  .facebook-btn {
+    background-color: #3b5998;
+  }
+  
+  .social-btn:hover {
+    transform: translateY(-5px);
+  }
+  
+  @media (max-width: 768px) {
+    .signin-container {
+      padding: 20px;
+      max-width: 350px;
+    }
+  
+    .signin-form h2 {
+      font-size: 1.8rem;
+    }
+  
+    .form-group input {
+      font-size: 1rem;
+    }
+  
+    .signin-btn {
+      font-size: 1rem;
+    }
+  
+    .social-btn {
+      font-size: 1rem;
+    }
+  }

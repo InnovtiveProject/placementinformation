@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Statistics</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Placement Statistics</h1>
+        <p>Overview of placement details, top companies, department-wise placement rates, and packages offered.</p>
+    </header>
+
+    <section class="top-companies">
+        <h2>Top Companies</h2>
+        <div class="company-stats">
+            <div>
+                <h3>TCS</h3>
+                <p>Students Placed: <span id="tcs-placed">50</span></p>
+            </div>
+            <div>
+                <h3>Cognizant</h3>
+                <p>Students Placed: <span id="cognizant-placed">40</span></p>
+            </div>
+            <div>
+                <h3>Wipro</h3>
+                <p>Students Placed: <span id="wipro-placed">60</span></p>
+            </div>
+            <div>
+                <h3>Oracle</h3>
+                <p>Students Placed: <span id="oracle-placed">30</span></p>
+            </div>
+            <div>
+                <h3>Microsoft</h3>
+                <p>Students Placed: <span id="microsoft-placed">20</span></p>
+            </div>
+            <div>
+                <h3>Genpact</h3>
+                <p>Students Placed: <span id="genpact-placed">25</span></p>
+            </div>
+        </div>
+        <canvas id="top-companies-chart"></canvas>
+    </section>
+
+    <section class="mass-recruiters">
+        <h2>Mass Recruiters</h2>
+        <p>Companies recruiting in bulk</p>
+        <ul>
+            <li>TCS</li>
+            <li>Wipro</li>
+            <li>Cognizant</li>
+            <li>Genpact</li>
+        </ul>
+    </section>
+
+    <section class="department-placement">
+        <h2>Department-wise Placement Rates</h2>
+        <div class="department-stats">
+            <div>Computer Science: 85%</div>
+            <div>Electrical Engineering: 75%</div>
+            <div>Mechanical Engineering: 70%</div>
+            <div>Civil Engineering: 65%</div>
+        </div>
+        <canvas id="department-chart"></canvas>
+    </section>
+
+    <section class="packages-offered">
+        <h2>Packages Offered</h2>
+        <canvas id="packages-chart"></canvas>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Placement Statistics | All Rights Reserved</p>
+    </footer>
+
+    <script src="stats.js"></script>
+</body>
+</html>

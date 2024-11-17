@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sign In - JobSphere</title>
+  <link rel="stylesheet" href="signin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Sign In Section -->
+  <section class="signin-section">
+    <div class="signin-container">
+      <div class="signin-form">
+        <h2>Sign In</h2>
+
+        <!-- Sign In Form -->
+        <form action="submit_login.php" method="POST">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-container">
+              <input type="password" id="password" name="password" placeholder="Enter your password" required>
+              <i id="password-toggle" class="fas fa-eye-slash"></i>
+            </div>
+          </div>
+          <div class="form-group remember-me">
+            <label for="remember">
+              <input type="checkbox" id="remember" name="remember">
+              Remember Me
+            </label>
+          </div>
+          
+          <button type="submit" class="btn signin-btn">Sign In</button>
+        </form>
+
+        <div class="additional-options">
+          <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+          <p>Don't have an account? <a href="signup.html" class="signup-link">Sign Up</a></p>
+        </div>
+
+        <!-- Social Login Buttons -->
+        <div class="social-login">
+          <p>Or sign in with</p>
+          <button class="social-btn google-btn"><i class="fab fa-google"></i> Google</button>
+          <button class="social-btn facebook-btn"><i class="fab fa-facebook-f"></i> Facebook</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

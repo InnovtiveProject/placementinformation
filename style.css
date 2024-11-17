@@ -1,0 +1,769 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #1a1a2e; /* Deep Navy Blue */
+  color: #f0f0f0; /* Light Grey */
+}
+
+body.dark-mode .header {
+  background-color: #16213e; /* Darker Navy Blue */
+}
+
+body.dark-mode .cta-btn {
+  background-color: #0f3460; /* Muted Royal Blue */
+  color: #e94560; /* Bright Coral */
+}
+
+body.dark-mode .stat-box {
+  background-color: #16213e; /* Darker Navy Blue */
+  color: #f0f0f0; /* Light Grey */
+}
+
+body.dark-mode .footer {
+  background-color: #16213e; /* Darker Navy Blue */
+  color: #f0f0f0;
+}
+
+body.dark-mode .login-btn {
+  background-color: #e94560; /* Bright Coral */
+  color: white;
+}
+
+/* Normal Mode Colors */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #007bff; /* Bright Blue */
+  color: white;
+}
+
+.nav-links a {
+  margin-right: 20px;
+  color: white;
+}
+
+.login-btn {
+  background-color: white;
+  color: #007bff; /* Bright Blue */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  font-weight: bold;
+}
+
+.login-btn:hover {
+  background-color: #007bff; /* Change to blue on hover */
+  color: white; /* Change text color to white on hover */
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('background.png');
+  background-size: cover;
+  padding: 100px 20px;
+  color: rgb(7, 7, 7);
+  font-size: larger;
+  text-align: center;
+  background-color: #0f3460; /* Muted Royal Blue */
+}
+
+.cta-btn {
+  background-color: #007bff; /* Bright Blue */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #e94560; /* Bright Coral */
+}
+/* Featured Companies Section */
+/* Featured Companies Section */
+.featured-companies {
+  padding: 20px;
+  text-align: center; /* Center align the heading */
+  background-color: #f4f4f4; /* Adjust background color if needed */
+}
+
+h2 {
+  margin-bottom: 25px; /* Space between heading and logos */
+  line-height: 1.4; /* Added line-height for better readability */
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive layout */
+  gap: 15px; /* Spacing between the cards */
+}
+
+.company-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; /* Remove any background */
+  padding: 15px; /* Add padding for spacing */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for zoom effect and shadow */
+}
+
+.company-card img {
+  max-width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  filter: brightness(1.2); /* Increase brightness */
+  transition: filter 0.3s; /* Smooth transition for brightness effect */
+}
+
+.company-card img:hover {
+  filter: brightness(1.2); /* Brighten on hover */
+}
+
+.company-card:hover {
+  transform: scale(1.05); /* Zoom in effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+/* Statistics Section */
+.statistics {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-box {
+  padding: 20px;
+  background-color: #007bff; /* Bright Blue */
+  color: white;
+  border-radius: 10px;
+}
+
+body.dark-mode .stat-box {
+  background-color: #1f4068; /* Dark Muted Blue */
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonial-slide {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  animation: slide-in 1s ease-in-out;
+}
+
+body.dark-mode .testimonial-slide {
+  background-color: #1f4068; /* Dark Muted Blue */
+  color: #f0f0f0; /* Light Grey */
+}
+
+@keyframes slide-in {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+/* contact section */
+
+.contact-section {
+  background-color: #f4f4f9;
+  padding: 40px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact-email {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  font-size: 1.1em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button.submit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.contact-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #0056b3; /* A deeper blue for the background */
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  margin-right: 20px;
+  color: white;
+  font-weight: 600; /* Bold text */
+  padding: 10px 15px; /* Add padding for clickable area */
+  border-radius: 5px; /* Rounded corners for links */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  text-transform: uppercase; /* Make text uppercase */
+  letter-spacing: 1px; /* Add space between letters for style */
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white for hover effect */
+  color: #fff; /* Keep text color white on hover */
+}
+
+/* Login Button */
+.login-btn {
+  background-color: white;
+  color: #007bff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  font-weight: bold;
+}
+
+.login-btn:hover {
+  background-color: #007bff; /* Change to blue on hover */
+  color: white; /* Change text color to white on hover */
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-left: 20px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 2.5px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Social Links Styling */
+.social-links {
+  margin-top: 10px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+body.dark-mode .social-links a {
+  color: #e94560;
+}
+
+/* About Us Button Styling */
+.about-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Dark Mode Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-left: 20px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 2.5px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #007bff; /* Bright Blue */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #e94560; /* Bright Coral */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .hero h2 {
+      font-size: 24px;
+      padding: 20px;
+  }
+
+  .cta-btn {
+      font-size: 14px;
+  }
+
+  .company-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* smoother animations */
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section Styles */
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Job Listings Section */
+.job-listings {
+  padding: 50px 20px;
+  background-color: #cdcccc;
+  text-align: center;
+}
+
+.job-listings h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.company-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Company Card Styling */
+.company-card1 {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+.company-card1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.company-card1 h3 {
+  color: #0056b3;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.company-card1 p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Apply Button */
+.apply-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 15px;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Card Animation */
+.company-card1 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.company-card1:nth-child(1) { animation-delay: 0.1s; }
+.company-card1:nth-child(2) { animation-delay: 0.2s; }
+.company-card1:nth-child(3) { animation-delay: 0.3s; }
+.company-card1:nth-child(4) { animation-delay: 0.4s; }
+.company-card1:nth-child(5) { animation-delay: 0.5s; }
+.company-card1:nth-child(6) { animation-delay: 0.6s; }
+.company-card1:nth-child(7) { animation-delay: 0.7s; }
+.company-card1:nth-child(8) { animation-delay: 0.8s; }
+.company-card1:nth-child(9) { animation-delay: 0.9s; }
+.company-card1:nth-child(10) { animation-delay: 1s; }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+      }
+ }
+
+
+
+ /* Search Bar Styling */
+.search-bar {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#jobSearchInput {
+  width: 80%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.cv-upload {
+  margin: 50px auto;
+  padding: 30px;
+  max-width: 700px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-upload:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.cv-upload h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.cv-upload p {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #34495e;
+  font-size: 16px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #ecf0f1;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="file"]:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.5);
+  outline: none;
+}
+
+input[type="file"] {
+  padding: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  background-color: #3498db;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(41, 128, 185, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(41, 128, 185, 0.2);
+}
